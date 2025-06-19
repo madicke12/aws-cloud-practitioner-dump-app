@@ -14,6 +14,67 @@ export const examQuestions = [
     "domain": "Général"
   },
   {
+    "id": 4000,
+    "question": "Dans le cadre du Cloud Adoption Framework (CAF) d'AWS, quel est l’objectif principal de la perspective « Gouvernance » ?",
+    "options": [
+      "Automatiser les déploiements d'infrastructure dans le cloud",
+      "Former les équipes techniques à l'utilisation d'AWS",
+      "Élaborer des mécanismes de contrôle pour la conformité et la gestion des risques",
+      "Superviser la consommation des ressources informatiques"
+    ],
+    "correct": [2],
+    "domain": "CAFARCH"
+  },
+  {
+    "id": 4001,
+    "question": "Lequel des éléments suivants est une pratique clé recommandée par le pilier « Excellence opérationnelle » du Well-Architected Framework ?",
+    "options": [
+      "Conserver les journaux d'activité uniquement en cas d’incident",
+      "Documenter les processus métier de manière ponctuelle",
+      "Effectuer une analyse post-incident afin d’améliorer les procédures futures",
+      "Allouer des ressources statiques pour éviter les interruptions"
+    ],
+    "correct": [2],
+    "domain": "CAFARCH"
+  },
+  {
+    "id": 4002,
+    "question": "Selon le Well-Architected Framework, quel principe de conception favorise une meilleure résilience dans le pilier « Fiabilité » ?",
+    "options": [
+      "Utiliser un seul point d'entrée pour simplifier le système",
+      "Déployer les ressources dans une seule zone de disponibilité",
+      "Effectuer des sauvegardes manuelles régulières",
+      "Concevoir une tolérance aux pannes en répartissant les charges"
+    ],
+    "correct": [3],
+    "domain": "CAFARCH"
+  },
+  {
+    "id": 4003,
+    "question": "Dans la perspective « Plateforme » du CAF, quelle est une responsabilité typique ?",
+    "options": [
+      "Définir les objectifs commerciaux de l'organisation",
+      "Configurer les systèmes de gestion des identités",
+      "Planifier la modernisation des applications et des environnements techniques",
+      "Évaluer les compétences du personnel non technique"
+    ],
+    "correct": [2],
+    "domain": "CAFARCH"
+  },
+  {
+    "id": 4004,
+    "question": "Quel principe est associé au pilier « Optimisation des coûts » dans le Well-Architected Framework ?",
+    "options": [
+      "Utiliser les modèles de consommation à la demande",
+      "Provisionner les ressources pour la charge maximale anticipée",
+      "Activer la journalisation détaillée sur toutes les ressources",
+      "Multiplier les redondances pour chaque composant"
+    ],
+    "correct": [0],
+    "domain": "CAFARCH"
+  }
+  ,
+  {
     "id": 2,
     "question": "Une entreprise a déployé des applications sur des instances Amazon EC2. Elle doit évaluer les vulnérabilités de ses applications et identifier les déploiements d'infrastructure non conformes aux bonnes pratiques. Quel service AWS peut-elle utiliser pour répondre à ces exigences ?",
     "options": [

@@ -30,7 +30,26 @@ export default function AWSExamApp() {
     setGameState('exam');
   };
 
+const flagQuestion= (questionid)=>{
+  console.log(currentQ?.id)
+    setquestionBank(prevQuestions => {
+        // console.log(prevQuestions)
 
+      return prevQuestions.map(question => {
+        if(!question.flagged) {
+        if (question.id === questionid) {
+          return { ...question, flagged: true }; // Inverse l'état du flag
+        }
+      }
+        if (question.id === questionid && question.flagged) {
+          return { ...question, flagged: !question.flagged }; // Inverse l'état du flag
+        }
+      
+      return question;
+    });
+    
+    })
+  };
   // Timer
   // useEffect(() => {
   //   if (gameState === 'exam' && timeLeft > 0) {
@@ -275,6 +294,15 @@ export default function AWSExamApp() {
             <div className="text-gray-600">
               Répondues: {answeredCount} / {TOTAL_QUESTIONS}
             </div>
+            <div className="text-gray-600">
+              <button className='bg-blue-100 text-blue-600 px-3 py-1 rounded-lg hover:bg-blue-200 transition-all duration-200'
+                onClick={() => flagQuestion(currentQ.id)}
+              >
+                {currentQ.flagged ? 'Retirer le flag' : 'Flaguer la question'}
+
+              </button>
+          </div>
+            
           </div>
         </div>
 
@@ -298,10 +326,8 @@ export default function AWSExamApp() {
               {questionBank.map((_ ,index)=>{
                 const correct = questionBank[index]?.correct || [];
                 const selected = selectedAnswers[questionBank[index]?.id] || []
-                // console.log({"correct": correct} , {"selected" :selected})
                 const red = correct.length > 0 && selected.length > 0 && !correct.every(ans => selected.includes(ans));
                 console.log({"red": red})
-                // const checked = false
                 return (
 
                 <button
